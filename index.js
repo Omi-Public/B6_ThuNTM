@@ -22,14 +22,12 @@ app.get('/get/user', function (req, res){
   })
 })
 
-app.post('/create/user', async function (req, res){
+app.post('/register/user', async function (req, res){
   var username = req.query.username;
   var password = req.query.password;
-  var age = req.query.age;
-  var hometown = req.query.hometown;
   var dateofbirth = req.query.dateofbirth;
   // res.send(username);
-  connection.query('Insert into tbl_user(`username`, `password`, `age`, `hometown`, `dateofbirth`) values(?,?,?,?,?)',[username, md5(password), age, hometown, dateofbirth],function (error, results, fields) {
+  connection.query('Insert into tbl_user(`username`, `password`, `dateofbirth`) values(?,?,?)',[username, md5(password), dateofbirth],function (error, results, fields) {
     res.send(results)
   });
   //var user = await connection.query('SELECT * FROM tbl_user where id = 1', function (error, results, fields) {

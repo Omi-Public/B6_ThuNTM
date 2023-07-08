@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  page = {
-    title: 'Home',
-    subtitle: 'Welcome!',
+  regis = {
+    username: 'Home',
+    password: 'Welcome!',
     content:'Some content'
   };
 
