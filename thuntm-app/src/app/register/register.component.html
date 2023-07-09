@@ -2,9 +2,9 @@
 <div id=”registration”>
     <form>
         <p>Please fill in this form to create an account.</p>
-        <div class="container signin">
-            <p>Already have an account? <a href="#">Login</a>.</p>
-        </div>
+        <!--<div class="container signin">
+            <p>Already have an account? <a href="#">Login</a></p>
+        </div> -->
         <div class = "field">
             <p><label>Username </label>
             <input type = "text" name = "username" class = "input" required> </p>
@@ -17,8 +17,9 @@
             <p><label>Birthday </label>
             <input type = "date" name = "dateofbirth" class = "input" required> </p>
         </div>
-        <button type = "submit" class="registerbtn" onclick = "myFunction()"> Register </button>
+        <button type = "submit" class="registerbtn" onclick = "RegisterFunct()"> Register </button>
         <script>
+            function RegisterFunct() {
             app.post('/register/user', async function (req, res){
             var username = req.query.username;
             var password = req.query.password;
@@ -27,7 +28,8 @@
             function (error, results, fields) {
                 res.send(results)
                 });
-            });
+            })
+            };
         </script>
 
     </form>

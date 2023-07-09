@@ -1,5 +1,5 @@
 
-/* header */
+<!-- header --> 
   <style>
     ul {
       list-style-type: none;
@@ -31,8 +31,21 @@
 
 <ul>
   <li><a class = "navbar-item">{{title}}</a></li>
-  <li><a class="active" href="login">Login</a></li>
-  <li><a href="register">Register</a></li>
+  <li> <ul></ul>
+    <a class="active" href="#login" onclick="myFunction()" >Login</a></li>
+    <script>
+      function myFunction() {
+        location.replace("http://localhost:4200/#login")
+      }
+      </script>
+  <li><a class ="navbar-item" routerLink = "/register" >Register</a></li>
+  <!--<li><a href="#register" onclick="myFunction()" >Register</a></li>
+    <script>
+      function myFunction() {
+        active,
+        location.replace("http://localhost:4200/#register")
+      }
+    </script> -->
 </ul>
 
 
@@ -40,7 +53,7 @@
 <app-register></app-register>
 
 
-/* footer */
+<!-- footer --> 
 <style>
   .footer {
     position: fixed;

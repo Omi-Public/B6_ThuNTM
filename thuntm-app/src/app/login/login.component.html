@@ -7,14 +7,15 @@
         </div>
         <div class = "field">
             <p><label>Password </label>
-            <input type = "text" name = "password" class = "input" required > </p>
+            <input type = "password" name = "password" class = "input" required > </p>
         </div>
         
-        <div class="container register">
-            <p>Register a new account? <a href="#">Register</a>.</p>
-        </div>
-        <button type = "submit" class="loginbtn" onclick = "myFunction()"> Login </button>
+        <!-- <div class="container register">
+            <p>Register a new account? <a href="#register">Register</a>.</p>
+        </div> -->
+        <button type = "submit" class="loginbtn" onclick = "LoginFunct()"> Login </button>
         <script>
+            function LoginFunct() {
             app.get('/login', async function (req, res){
             var username = req.query.username;
             var password = req.query.password;
@@ -23,7 +24,7 @@
             res.send(results)
             })
             res.send("Hello " + username);
-            });
+            })};
         </script>
     </form>
 
