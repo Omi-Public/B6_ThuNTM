@@ -1,4 +1,4 @@
-<p>Login</p>
+<div app-title > Login</div>
 <div id=login>
     <form>
         <div class = "field">
@@ -10,11 +10,11 @@
             <input type = "password" name = "password" class = "input" required > </p>
         </div>
         
-        <!-- <div class="container register">
-            <p>Register a new account? <a href="#register">Register</a>.</p>
-        </div> -->
+        <div class="container register">
+            <p>Register a new account? <a  class ="active" href="/register" routerLink = "/register">Register</a></p>
+        </div> 
         <button type = "submit" class="loginbtn" onclick = "LoginFunct()"> Login </button>
-        <script>
+        <!-- <script>
             function LoginFunct() {
             app.get('/login', async function (req, res){
             var username = req.query.username;
@@ -25,7 +25,7 @@
             })
             res.send("Hello " + username);
             })};
-        </script>
+        </script> -->
     </form>
 
  

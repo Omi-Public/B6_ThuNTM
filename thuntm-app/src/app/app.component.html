@@ -1,71 +1,57 @@
-
 <!-- header --> 
-  <style>
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
+<style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
 
-    li {
-      float: left;
-    }
-      li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover:not(.active) {
-      background-color: #111;
-    }
+  li {
+    float: left;
+  }
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
 
-    .active {
-      background-color: #04AA6D;
-    }
-    </style>
+  .active {
+    background-color: #04AA6D;
+  }
+  </style>
 
 <ul>
-  <li><a class = "navbar-item">{{title}}</a></li>
-  <li> <ul></ul>
-    <a class="active" href="#login" onclick="myFunction()" >Login</a></li>
-    <script>
-      function myFunction() {
-        location.replace("http://localhost:4200/#login")
-      }
-      </script>
-  <li><a class ="navbar-item" routerLink = "/register" >Register</a></li>
-  <!--<li><a href="#register" onclick="myFunction()" >Register</a></li>
-    <script>
-      function myFunction() {
-        active,
-        location.replace("http://localhost:4200/#register")
-      }
-    </script> -->
+<li><a class = "navbar-item">{{title}}</a></li>
+<li><a class="active" href="login" routerLink = "/login" >Login</a></li>
+<li><a class ="navbar-item" onclick = "active" routerLink = "/register" >Register</a></li>
+
 </ul>
 
 
-<app-login></app-login>
-<app-register></app-register>
+<router-outlet></router-outlet>
 
 
 <!-- footer --> 
 <style>
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(222, 221, 221);
-    color: black;
-    text-align: center;
-  }
-  </style>
-  
-  <div class="footer">
-    <p>Made by Thu</p>
-  </div>
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(222, 221, 221);
+  color: black;
+  text-align: center;
+}
+</style>
+
+<footer>
+  <p>Made by Thu</p>
+</footer>
